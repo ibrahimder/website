@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family:Poppins,sans-serif;
+}
+
+:root{
+    --FC:black;
+    --SC:aqua;
+    --TC:white;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--FC);
+    color: white;
+} 
+
+header{
+    width: 80%;
+    margin-inline: auto;
+    padding: 15px 0;
+    display: flex;justify-content: space-between;align-items: center;
+}
+
+header a {
+    margin: 0 30px;
+    padding:15px 0;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    color: var(--TC);
+}
+a::after{
+    content:"";
+    height: 2px;
+    width:0;
+    position: absolute;
+    left:-1px;
+    bottom:12px;
+    border-radius: 25px;
+    background-color: var(--SC);
+    transition: .55s;
+}
+a:hover::after{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin-inline:auto ;
+}
+
+#home{
+    height: calc(100vh - 65px);
+    display: flex;flex-direction: column; justify-content: center;
+    text-align: center;
+}
+#home h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--SC);
+}
+#home button{
+    width: 150px;
+    margin: 20px 10px;
+    padding: 15px 0;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: 2px solid;
+    border-radius:25px;
+    overflow: hidden;
+    z-index: 2;   
+}
+#home button span{
+    height: 100%;
+    width:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--SC);
+    border-radius: 25px;
+    z-index: -1;
+    transition: .5s;
+}
+#home button:hover span{
+    width: 100%;
+}
+#home button:hover{
+    border: none;
+}
+
+#Works{
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+#Works article{
+    margin: 1rem auto 0;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--SC);
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+}
+#Works article h2{
+    margin-bottom: 50px;
+    position: relative;
+}
+#Works article h2::after{
+    content: "";
+    width:0;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    border-radius: 25px;
+    background-color: aqua;
+    transition: .5s;
+}
+#html:hover::after{
+    width:100%;
+}
+
+#java:hover::after{
+    width:85%;
+}
+#python:hover::after{
+    width:90%;
+}
+
+.works-per{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
